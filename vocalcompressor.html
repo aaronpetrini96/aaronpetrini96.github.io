@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>VocalCompressor — Aaron Petrini</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="VocalCompressor: Two classic compressor styles in one vocal plugin. A personal audio plugin project by Aaron Petrini, built with C++ and JUCE." />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Aaron Petrini</a>
+        <nav aria-label="Main">
+          <a href="index.html#work">Professional Work</a>
+          <a href="index.html#projects">Personal Projects</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-hero">
+        <div class="container">
+          <a class="back-link" href="index.html#projects">&larr; Personal Projects</a>
+          <h1>VocalCompressor</h1>
+          <p class="role">Two classic compressor styles in one vocal plugin.</p>
+          <p class="meta">C++ · JUCE · VST3 &amp; AU · Nov 2026</p>
+          <p class="lead">A personal C++/JUCE project covering both DSP and interface. It combines a fast FET-style unit (FET-76) and a smooth optical-style unit (OPT-2A), so you can run a vocal chain in one plugin with swappable order and independent bypass.</p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="https://www.linkedin.com/posts/aaronpetrini_id-like-to-share-another-personal-project-activity-7415138760297738240-j76m" target="_blank" rel="noopener">Watch the demo</a>
+            <a class="btn btn-secondary" href="https://drive.google.com/drive/folders/1cIKabEY3tieoeP-Z61kBPYNYi_bAXdY5" target="_blank" rel="noopener">Download (VST3 &amp; AU)</a>
+            <a class="btn btn-secondary" href="https://github.com/aaronpetrini96/VocalCompressor" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <img class="project-image" src="images/vocalcompressor.svg" alt="VocalCompressor plugin interface" />
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Features</h2>
+          <div class="feature-grid">
+          <div class="feature-group">
+            <h3>FET-76</h3>
+            <ul>
+              <li>Input, Output, Attack and Release knobs. Attack and Release range from 1 to 7.</li>
+              <li>Ratio buttons from 4 to 20, plus an ALL mode that gets faster and stronger as the signal is pushed harder.</li>
+              <li>Asymmetric soft-clipper with a DC blocker, adding harmonic saturation that grows with ratio without changing loudness.</li>
+              <li>Mix knob for parallel compression.</li>
+            </ul>
+          </div>
+          <div class="feature-group">
+            <h3>OPT-2A</h3>
+            <ul>
+              <li>Gain and Peak Reduction knobs, and a COMP/LIMIT switch.</li>
+              <li>No attack or release controls. The release follows the signal, recovering faster on quiet passages and slower on loud ones.</li>
+              <li>The same soft-clipper class as the FET-76, set lighter, with a DC blocker.</li>
+              <li>Mix knob for parallel compression.</li>
+            </ul>
+          </div>
+          <div class="feature-group">
+            <h3>Extras</h3>
+            <ul>
+              <li>Signal Flow: swaps the order of the two stages with a click-free crossfade.</li>
+              <li>Gain reduction LED meters on each stage.</li>
+              <li>Oversampling across the whole chain, with latency reported to the host.</li>
+              <li>Preset manager with factory and user presets, and Undo/Redo.</li>
+              <li>Resizable interface with several sizes and a saveable default.</li>
+              <li>Global Bypass.</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© Aaron Petrini</div>
+    </footer>
+  </body>
+</html>

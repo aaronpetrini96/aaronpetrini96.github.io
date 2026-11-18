@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>IRFx — Aaron Petrini</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="IRFx: A fast, practical tool for modern guitarists. A personal audio plugin project by Aaron Petrini, built with C++ and JUCE." />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Aaron Petrini</a>
+        <nav aria-label="Main">
+          <a href="index.html#work">Professional Work</a>
+          <a href="index.html#projects">Personal Projects</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-hero">
+        <div class="container">
+          <a class="back-link" href="index.html#projects">&larr; Personal Projects</a>
+          <h1>IRFx</h1>
+          <p class="role">A fast, practical tool for modern guitarists.</p>
+          <p class="meta">C++ · JUCE · Aug 2025</p>
+          <p class="lead">A guitar and bass cabinet impulse response (IR) loader with several extra processing features.</p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="https://www.linkedin.com/posts/aaronpetrini_c-juce-audioprogramming-activity-7364081873012121601-_iK_" target="_blank" rel="noopener">Watch the demo</a>
+            <a class="btn btn-secondary" href="https://github.com/aaronpetrini96/IRFx" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <img class="project-image" src="images/irfx.svg" alt="IRFx plugin interface" />
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Features</h2>
+          <div class="feature-grid">
+          <div class="feature-group">
+            <h3>IR Loader</h3>
+            <ul>
+              <li>Loads up to two guitar or bass cabinet IRs. Each IR can be unloaded, muted and level-adjusted.</li>
+              <li>A panning control appears in stereo mode.</li>
+              <li>12 dB/octave high-pass and low-pass filters with adjustable cutoff frequencies.</li>
+            </ul>
+          </div>
+          <div class="feature-group">
+            <h3>Tone Stack</h3>
+            <ul>
+              <li>A classic three-knob EQ (Bass, Mid, Treble).</li>
+              <li>Frequency and Q are preset, except the Mid frequency, which you can adjust.</li>
+            </ul>
+          </div>
+          <div class="feature-group">
+            <h3>Saturation</h3>
+            <ul>
+              <li>Three selectable distortion modes, with Drive and Mix knobs for intensity and dry/saturated blend.</li>
+            </ul>
+          </div>
+          <div class="feature-group">
+            <h3>Delay</h3>
+            <ul>
+              <li>Placed at the end of the chain, with Digital and Tape modes.</li>
+              <li>Time, Feedback and Mix controls, plus a Sync button that locks the delay to the DAW&#x27;s BPM.</li>
+            </ul>
+          </div>
+          <div class="feature-group">
+            <h3>Extras</h3>
+            <ul>
+              <li>Preset save/load and global bypass.</li>
+              <li>Input/output gain sliders and clipping indicators.</li>
+              <li>Independent bypass for each section.</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© Aaron Petrini</div>
+    </footer>
+  </body>
+</html>

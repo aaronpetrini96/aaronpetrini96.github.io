@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ExtremeComp — Aaron Petrini</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ExtremeComp: An aggressive vocal compressor for heavy vocals. A personal audio plugin project by Aaron Petrini, built with C++ and JUCE." />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Aaron Petrini</a>
+        <nav aria-label="Main">
+          <a href="index.html#work">Professional Work</a>
+          <a href="index.html#projects">Personal Projects</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-hero">
+        <div class="container">
+          <a class="back-link" href="index.html#projects">&larr; Personal Projects</a>
+          <h1>ExtremeComp</h1>
+          <p class="role">An aggressive vocal compressor for heavy vocals.</p>
+          <p class="meta">C++ · JUCE · Dec 2025</p>
+          <p class="lead">A compressor plugin for metal vocals. Besides compression, it applies EQ and saturation to give a powerful, nearly mix-ready sound.</p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="https://www.linkedin.com/posts/aaronpetrini_id-like-to-share-another-personal-project-activity-7413302597815771136-ACwn" target="_blank" rel="noopener">Watch the demo</a>
+            <a class="btn btn-secondary" href="https://github.com/aaronpetrini96/ExtremeCompressor" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <img class="project-image" src="images/extremecomp.svg" alt="ExtremeComp plugin interface" />
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Features</h2>
+          <div class="feature-grid">
+          <div class="feature-group">
+            <h3>Compression</h3>
+            <ul>
+              <li>A single Compression knob controls the amount. Higher settings give a more aggressive, high-ratio effect, and lower settings give a gentler, more natural one.</li>
+              <li>Mix knob blends wet and dry signal. At 100%, only the wet signal is heard.</li>
+              <li>Auto Input Gain button sets the input level for the compression stage. You can also set input gain manually with a slider.</li>
+            </ul>
+          </div>
+          <div class="feature-group">
+            <h3>Tone</h3>
+            <ul>
+              <li>Saturation with two selectable modes, or off.</li>
+              <li>EQ applied based on the Compression value, with Body and Air knobs for fine-tuning.</li>
+              <li>The EQ can be placed before or after compression, and a preset high-pass filter can be enabled.</li>
+            </ul>
+          </div>
+          <div class="feature-group">
+            <h3>Extras</h3>
+            <ul>
+              <li>Preset saving/loading and global bypass.</li>
+              <li>Input/output gain sliders.</li>
+              <li>Gain reduction meter and clipping indicators.</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© Aaron Petrini</div>
+    </footer>
+  </body>
+</html>
