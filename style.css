@@ -1,0 +1,270 @@
+/* Simple static styles — no animations, no scripts. */
+:root {
+  --bg: #050816;
+  --bg-card: #0b1023;
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #f4f6fb;
+  --text-secondary: rgba(244, 246, 251, 0.72);
+  --text-muted: rgba(244, 246, 251, 0.6);
+  --accent: #4f8cff;
+  --font-display: "Sora", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container {
+  width: min(1100px, 100% - 48px);
+  margin-inline: auto;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(5, 8, 22, 0.92);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  min-height: 64px;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+}
+
+.site-header nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-header nav a:hover {
+  color: var(--text);
+}
+
+/* Hero */
+.hero {
+  padding: 120px 0 96px;
+  background: radial-gradient(60% 80% at 15% 0%, rgba(79, 140, 255, 0.18), transparent 70%);
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 2.1rem + 3vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.role {
+  margin: 12px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 1.1rem + 0.7vw, 1.75rem);
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.lead {
+  max-width: 600px;
+  margin: 24px 0 0;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--border);
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #050816;
+}
+
+.btn-primary:hover {
+  background: #7aa8ff;
+}
+
+.btn-secondary {
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Sections */
+.section {
+  padding: 72px 0;
+  border-top: 1px solid var(--border);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 1.6rem + 0.7vw, 2.25rem);
+  letter-spacing: -0.02em;
+}
+
+.section-intro {
+  margin: 8px 0 36px;
+  color: var(--text-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #0f1530;
+}
+
+.card-body {
+  padding: 24px;
+}
+
+.card-meta {
+  margin: 0 0 4px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+h3 {
+  font-size: 1.35rem;
+}
+
+.card-body p {
+  margin: 8px 0 0;
+  color: var(--text-secondary);
+}
+
+.card-body .card-meta {
+  margin: 0 0 4px;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.95rem;
+}
+
+/* Skills */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+
+.chips li {
+  padding: 6px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+}
+
+/* Contact */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+.site-footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
