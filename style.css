@@ -119,6 +119,11 @@ h1 {
   color: var(--accent);
 }
 
+.hero h1,
+.hero .role {
+  text-align: center;
+}
+
 .lead {
   max-width: 600px;
   margin: 24px 0 0;
