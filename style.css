@@ -1,11 +1,11 @@
 /* Simple static styles — no animations, no scripts. */
 :root {
   --bg: #050816;
-  --bg-card: #0b1023;
-  --border: rgba(255, 255, 255, 0.1);
+  --bg-card: #151825;
+  --border: rgba(255, 255, 255, 0.2);
   --text: #f4f6fb;
-  --text-secondary: rgba(244, 246, 251, 0.72);
-  --text-muted: rgba(244, 246, 251, 0.6);
+  --text-secondary: rgba(244, 246, 251, 0.95);
+  --text-muted: rgba(244, 246, 251, 0.65);
   --accent: #4f8cff;
   --font-display: "Sora", "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
@@ -17,7 +17,8 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 72px;
+  scroll-padding-top: 20px;
+  scroll-snap-type: y proximity;
 }
 
 body {
@@ -25,7 +26,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 1.0625rem;
+  font-size: 1.2rem;
   line-height: 1.65;
 }
 
@@ -49,7 +50,7 @@ a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(5, 8, 22, 0.92);
+  background: rgba(5, 8, 22, 0.8);
   border-bottom: 1px solid var(--border);
 }
 
@@ -59,7 +60,7 @@ a:focus-visible {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px 24px;
-  min-height: 64px;
+  min-height: 50px;
 }
 
 .brand {
@@ -78,23 +79,27 @@ a:focus-visible {
 .site-header nav a {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .site-header nav a:hover {
   color: var(--text);
 }
 
+.site-header nav a.active {
+  color: var(--accent);
+}
+
 /* Hero */
 .hero {
-  padding: 120px 0 96px;
-  background: radial-gradient(60% 80% at 15% 0%, rgba(79, 140, 255, 0.18), transparent 70%);
+  padding: 70px 0 96px;
+  background: radial-gradient(60% 80% at 20% 0%, rgba(79, 140, 255, 0.15), transparent 70%);
 }
 
 .eyebrow {
-  margin: 0 0 16px;
+  margin: 0 0 56px;
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: .95rem;
 }
 
 h1,
@@ -103,19 +108,20 @@ h3 {
   font-family: var(--font-display);
   line-height: 1.15;
   margin: 0;
+  text-align: left;
 }
 
 h1 {
-  font-size: clamp(2.75rem, 2.1rem + 3vw, 4.5rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-size: clamp(5rem, 3rem + 2.5vw, 5rem);
+  font-weight: 500;
+  letter-spacing: 0.01rem;
 }
 
 .role {
-  margin: 12px 0 0;
+  margin: 10px 0 0;
   font-family: var(--font-display);
-  font-size: clamp(1.25rem, 1.1rem + 0.7vw, 1.75rem);
-  font-weight: 600;
+  font-size: clamp(1rem, 1.5rem + 0.7vw, 1.8rem);
+  font-weight: 100;
   color: var(--accent);
 }
 
@@ -125,26 +131,81 @@ h1 {
 }
 
 .lead {
-  max-width: 600px;
-  margin: 24px 0 0;
-  font-size: 1.2rem;
+  margin: 20px 0px 0;
+  font-size: 1.25rem;
   color: var(--text-secondary);
+  text-align: justify;
+}
+
+.intro-card {
+  margin-top: 60px;
+  padding: 32px 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.intro-card .lead:first-child {
+  margin-top: 0;
 }
 
 .button-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 36px;
+  gap: 20px;
+  margin-top: 100px;
+  justify-content: center;
+}
+
+.scroll-hint {
+  display: block;
+  margin-top: 100px;
+  text-align: center;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 1.5rem;
+  animation: scroll-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.scroll-hint:hover {
+  color: var(--text);
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
+}
+
+.hero .btn {
+  width: 250px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hero .btn svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .btn-primary {
@@ -169,6 +230,11 @@ h1 {
 .section {
   padding: 72px 0;
   border-top: 1px solid var(--border);
+}
+
+main section[id] {
+  min-height: calc(100vh - 50px);
+  scroll-snap-align: start;
 }
 
 h2 {
@@ -271,6 +337,10 @@ h3 {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .scroll-hint {
+    animation: none;
   }
 }
 

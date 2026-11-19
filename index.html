@@ -21,8 +21,9 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="#top">Aaron Petrini</a>
+        <a class="brand" href="#top">Aaron Petrini - Web Portfolio</a>
         <nav aria-label="Main">
+          <a href="#home">Home</a>
           <a href="#work">Professional Work</a>
           <a href="#projects">Personal Projects</a>
           <a href="#contact">Contact</a>
@@ -31,21 +32,23 @@
     </header>
 
     <main id="top">
-      <section class="hero">
+      <section id="home" class="hero">
         <div class="container">
-          <p class="eyebrow">Buenos Aires, Argentina</p>
           <h1>Aaron Petrini</h1>
           <p class="role">Audio Software Engineer · C++ / JUCE</p>
+          <div class="intro-card">
           <p class="lead">Welcome to my portfolio! 💼</p>
           <p class="lead">I'm an audio engineer based in Buenos Aires, Argentina, building audio plugins with modern C++ and JUCE. My degree covered acoustics, electroacoustics, DSP, and music production. I have also been playing guitar for more than 15 years and love recording and mixing my own music, so I build tools with both the engineering and the user in mind.</p>
           <p class="lead">I've worked as an audio software developer and shipped commercial plugins, covering everything from DSP to user interfaces. I also develop my own personal plugin projects.</p>
           <p class="lead">I'm interested in remote teams working on technically challenging audio software, and I'm also open to freelance and project-based work.</p>
           <p class="lead">Feel free to explore my work and get in touch.</p>
-          <div class="button-row">
-            <a class="btn btn-primary" href="#work">See my work</a>
-            <a class="btn btn-secondary" href="https://drive.google.com/file/d/1sniBaYMMDnfes6-jsnMOi0Qz1FKTEBkw/view?usp=sharing">CV</a>
-            <a class="btn btn-secondary" href="#contact">Contact</a>
           </div>
+          <div class="button-row">
+            <a class="btn btn-primary" href="#work"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>See my work</a>
+            <a class="btn btn-secondary" href="https://drive.google.com/file/d/1sniBaYMMDnfes6-jsnMOi0Qz1FKTEBkw/view?usp=sharing"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>CV</a>
+            <a class="btn btn-secondary" href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Contact</a>
+          </div>
+          <a class="scroll-hint" href="#work">↓ Scroll down ↓</a>
         </div>
       </section>
 
@@ -69,7 +72,7 @@
                 <a class="card-link" href="https://codwaves.com/quance/">codwaves.com</a>
               </div>
             </article>
-            
+
             <article class="card">
               <img src="images/wavebalance.svg" alt="WaveBalance plugin interface" />
               <div class="card-body">
@@ -190,5 +193,20 @@
     <footer class="site-footer">
       <div class="container">© Aaron Petrini</div>
     </footer>
+    <script>
+      const navLinks = document.querySelectorAll(".site-header nav a");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach((link) =>
+              link.classList.toggle("active", link.hash === "#" + entry.target.id)
+            );
+          });
+        },
+        { rootMargin: "-40% 0px -55% 0px" }
+      );
+      document.querySelectorAll("main section[id]").forEach((section) => observer.observe(section));
+    </script>
   </body>
 </html>
