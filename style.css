@@ -249,46 +249,125 @@ h2 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 40px;
 }
 
 .card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 .card img {
   display: block;
-  width: 100%;
+  flex: 0 0 45%;
+  width: 45%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
-  background: #0f1530;
+  object-fit: contain;
+}
+
+@media (max-width: 720px) {
+  .card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .card img {
+    flex: none;
+    width: 100%;
+  }
+}
+
+#work .card {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#work .card img {
+  flex: none;
+  width: 100%;
 }
 
 .card-body {
-  padding: 24px;
+  flex: 1;
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.card-body .card-body-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 20px 0 20px;
+  aspect-ratio: auto;
+}
+
+.card-body .card-body-img + .card-subtitle {
+  margin-top: 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.card-body p + .card-subtitle {
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.card-subtitle {
+  margin: 8px 0 0;
+  font-family: var(--font-display);
+  font-size: 1.24rem;
+  font-weight: 300;
+  text-align: left;
 }
 
 .card-meta {
   margin: 0 0 4px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--text-muted);
+  text-align: center;
 }
 
 h3 {
-  font-size: 1.35rem;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 300;
+  /* text-transform: uppercase; */
 }
 
 .card-body p {
-  margin: 8px 0 0;
+  margin: 0px 0 0;
   color: var(--text-secondary);
+  text-align: justify;
+  font-size: 1.1rem;
 }
 
 .card-body .card-meta {
   margin: 0 0 4px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.card-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 16px;
+}
+
+.card-title-row h3,
+.card-title-row .card-meta {
+  margin: 0;
+  text-align: left;
 }
 
 .card-link {
