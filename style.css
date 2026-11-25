@@ -165,17 +165,47 @@ h1 {
   justify-content: center;
 }
 
+.hero-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.hero-tools img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.hero-tools + .hero-tools {
+  margin-top: 24px;
+}
+
+.hero-tools-main img {
+  width: 72px;
+  height: 72px;
+}
+
+.hero-tools-mid img {
+  width: 58px;
+  height: 58px;
+}
+
+.hero-tools .rounded-icon {
+  border-radius: 22%;
+}
+
 .last-updated {
   margin: 16px 0 0;
   text-align: left;
   font-size: 0.9rem;
   color: var(--text-muted);
-}
-
-.divider {
-  margin: 40px 0 0;
-  border: 0;
-  border-top: 1px solid var(--border);
 }
 
 .scroll-hint {
@@ -529,7 +559,7 @@ h3 {
 
 .card-plain .card-link {
   margin-top: 36px;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 /* Skills */
