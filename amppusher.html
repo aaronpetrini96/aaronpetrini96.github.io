@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AmpPusher — Aaron Petrini</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="AmpPusher: two neural overdrives for pushing your amp. A personal machine-learning plugin project by Aaron Petrini, built with C++/JUCE and Python (PyTorch)." />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Aaron Petrini</a>
+        <nav aria-label="Main">
+          <a href="index.html#work">Professional Work</a>
+          <a href="index.html#projects">Personal Projects</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-hero">
+        <div class="container">
+          <a class="back-link" href="index.html#projects">&larr; Personal Projects</a>
+          <h1>AmpPusher</h1>
+          <p class="role">Two neural overdrives for pushing your amp!</p>
+          <p class="lead">AmpPusher is a personal machine-learning project in C++/JUCE and Python (PyTorch), built while learning the basics. It has two neural overdrive units based on the classic green and yellow pedals, running in real time inside a plugin.</p>
+        </div>
+      </section>
+
+      <section class="section section-plain">
+        <div class="container">
+          <div class="pedal-pair">
+            <img class="project-image" src="images/AmpPusherGreen.png" alt="AmpPusher green unit" />
+            <img class="project-image" src="images/AmpPusherYellow.png" alt="AmpPusher yellow unit" />
+          </div>
+          <p class="meta">C++ · JUCE · Python · PyTorch · Nov 2026</p>
+          <div class="button-row">
+            <!-- <a class="btn btn-primary" href="https://drive.google.com/file/d/1iEf8OdnVBNuNCwL6C5-MkCe1OtJR_9VS/view?usp=sharing" target="_blank" rel="noopener">Plugin Demo</a> -->
+            <a class="btn btn-primary" href="https://ko-fi.com/s/b1176f0ec3" target="_blank" rel="noopener">Download (VST3 &amp; AU)</a>
+            <a class="btn btn-primary" href="https://github.com/aaronpetrini96/GuitarToolsV2/" target="_blank" rel="noopener">Source Code (GitHub)</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-plain">
+        <div class="container">
+          <h2>Main Features</h2>
+          <div class="feature-grid feature-list">
+          <div class="feature-group">
+            <h3>Neural Overdrive</h3>
+            <ul>
+              <li>Each unit is a small GRU network trained in PyTorch and conditioned on Drive and Tone. It runs in real time in C++ through RTNeural. Output level follows a measured gain curve, not a learned one.</li>
+            </ul>
+          </div>
+          <div class="feature-group">
+            <h3>Controls</h3>
+            <ul>
+              <li>Drive, Tone and Level knobs, a Mode switch for the green or yellow unit, and a bypass footswitch.</li>
+            </ul>
+          </div>
+          <div class="feature-group">
+            <h3>Same Sound at Any Sample Rate</h3>
+            <ul>
+              <li>The networks always run at 48 kHz, the rate they were trained at. At other session rates the plugin resamples around them and reports the added latency to the host for compensation.</li>
+            </ul>
+          </div>
+          <div class="feature-group">
+            <h3>Extra Features</h3>
+            <ul>
+              <li>Click-free bypass: crossfades to a latency-matched dry signal and stops the networks while bypassed</li>
+              <li>Click-free switching between the two units</li>
+              <li>Resizable Interface: four sizes, with a savable default</li>
+              <li>Accuracy: 24 to 31 dB null depth against the source emulation on held-out audio</li>
+              <li>Parity test: a C++ test checks that the plugin matches the PyTorch model</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© Aaron Petrini</div>
+    </footer>
+  </body>
+</html>

@@ -28,58 +28,61 @@
         <div class="container">
           <a class="back-link" href="index.html#projects">&larr; Personal Projects</a>
           <h1>GuitarTools</h1>
-          <p class="role">GuitarTools makes mixing guitars fast and simple.</p>
+          <p class="role">GuitarTools makes mixing guitars fast and simple!</p>
+          <p class="lead">
+A personal project built in C++ with JUCE, covering both the DSP and the interface. It brings the processing I use most when mixing electric guitars into one plugin, designed to be quick and easy to use.</p>
+        </div>
+      </section>
+
+      <section class="section section-plain">
+        <div class="container">
+          <img class="project-image" src="images/guitartools.png" alt="GuitarTools plugin interface" />
           <p class="meta">C++ · JUCE · VST3 &amp; AU · Oct 2026</p>
-          <p class="lead">A personal C++/JUCE project covering both DSP and interface. It bundles the processing you usually need when mixing electric guitars into one plugin.</p>
           <div class="button-row">
-            <a class="btn btn-primary" href="https://drive.google.com/file/d/1iEf8OdnVBNuNCwL6C5-MkCe1OtJR_9VS/view?usp=sharing" target="_blank" rel="noopener">Watch the demo</a>
-            <a class="btn btn-secondary" href="https://ko-fi.com/s/b1176f0ec3" target="_blank" rel="noopener">Download (VST3 &amp; AU)</a>
-            <a class="btn btn-secondary" href="https://github.com/aaronpetrini96/GuitarToolsV2/" target="_blank" rel="noopener">Source code</a>
+            <a class="btn btn-primary" href="https://drive.google.com/file/d/1iEf8OdnVBNuNCwL6C5-MkCe1OtJR_9VS/view?usp=sharing" target="_blank" rel="noopener">Plugin Demo</a>
+            <a class="btn btn-primary" href="https://ko-fi.com/s/b1176f0ec3" target="_blank" rel="noopener">Download (VST3 &amp; AU)</a>
+            <a class="btn btn-primary" href="https://github.com/aaronpetrini96/GuitarToolsV2/" target="_blank" rel="noopener">Source Code (GitHub)</a>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section section-plain">
         <div class="container">
-          <img class="project-image" src="images/guitartools.png" alt="GuitarTools plugin interface" />
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <h2>Features</h2>
-          <div class="feature-grid">
+          <h2>Main Features</h2>
+          <div class="feature-grid feature-list">
           <div class="feature-group">
             <h3>Tone Range</h3>
             <ul>
-              <li>Low Cut and High Cut filters with adjustable cutoff and selectable slopes of 12, 24, 36 and 48 dB/oct.</li>
+              <li>Low Cut / High Cut: high-pass and low-pass filters with adjustable cutoff frequency and four selectable slopes: 12, 24, 36 and 48 dB/oct.</li>
             </ul>
           </div>
           <div class="feature-group">
             <h3>Clean-Up</h3>
             <ul>
-              <li>Kill Reso: narrow cut for harsh resonances.</li>
-              <li>Clear Mud: wider cut for low-mid buildup.</li>
-              <li>Tame Lows: band compressor for chugs and palm mutes.</li>
-              <li>Each tool has a MAX switch for more aggressive processing.</li>
+              <li>Kill Reso: narrow cut with adjustable frequency to remove harsh resonances.</li>
+              <li>Clear Mud: wider cut that reduces low-mid buildup, with adjustable amount.</li>
+              <li>Tame Lows: band compressor that keeps the low end of chugs and palm mutes under control, with adjustable amount.</li>
+              <li>Each tool includes a MAX switch for more aggressive processing.</li>
             </ul>
           </div>
           <div class="feature-group">
             <h3>Color</h3>
             <ul>
-              <li>Depth: low shelf with four frequency modes and gain.</li>
-              <li>Presence: high shelf with four frequency modes and gain.</li>
+              <li>Depth: low shelf filter with four selectable frequency modes and gain control.</li>
+              <li>Presence: high shelf filter with four selectable frequency modes and gain control.</li>
             </ul>
           </div>
           <div class="feature-group">
-            <h3>Extras</h3>
+            <h3>Extra Features</h3>
             <ul>
-              <li>Levels with peak meters and clip indicators.</li>
-              <li>Match Loudness and Low Tuning.</li>
-              <li>Preset manager with factory and user presets.</li>
-              <li>Undo/Redo.</li>
-              <li>Resizable interface with a saveable default size.</li>
-              <li>Optional tooltips and Global Bypass.</li>
+              <li>Levels: input and output gain with peak meters and clip indicators.</li>
+              <li>Match Loudness: automatically keeps the output level equal to the input.</li>
+              <li>Low Tuning: shifts the low-end processing down for guitars in lower tunings.</li>
+              <li>Preset Manager: browser with factory and user presets.</li>
+              <li>Undo/Redo: steps back and forward through changes.</li>
+              <li>Resizable Interface: several window sizes, with a default you can save.</li>
+              <li>Tooltips: optional strip that describes each control on hover.</li>
+              <li>Global Bypass: switches all processing off for quick comparisons.</li>
             </ul>
           </div>
           </div>
