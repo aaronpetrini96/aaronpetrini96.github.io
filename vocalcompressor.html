@@ -35,13 +35,21 @@
 
       <section class="section section-plain">
         <div class="container">
-          <img class="project-image" src="images/vocalcompressor.png" alt="VocalCompressor plugin interface" />
-          <p class="meta">C++ · JUCE · VST3 &amp; AU · Nov 2026</p>
+          <div class="carousel">
+            <img class="project-image is-active" src="images/vocalcompressor_2.png" data-caption="Main view" alt="VocalCompressor main view" />
+            <img class="project-image" src="images/vocalcompressor_1.png" data-caption="OPT-2A bypassed, with only the FET-76 compressing" alt="VocalCompressor with the OPT-2A bypassed" />
+            <img class="project-image" src="images/vocalcompressor_3.png" data-caption="Swapped order: OPT-2A into FET-76" alt="VocalCompressor with the OPT-2A first" />
+            <button class="carousel-btn carousel-prev" type="button" aria-label="Previous image">&lsaquo;</button>
+            <button class="carousel-btn carousel-next" type="button" aria-label="Next image">&rsaquo;</button>
+          </div>
+          <p class="meta carousel-caption">Main view</p>
+          <hr class="divider" />
           <div class="button-row">
             <a class="btn btn-primary" href="https://drive.google.com/file/d/1AkAbD-ZJJhVPQyZ_TPiCC4rSiJrOB2vN/view?usp=drive_link" target="_blank" rel="noopener">Watch the demo</a>
             <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1cIKabEY3tieoeP-Z61kBPYNYi_bAXdY5" target="_blank" rel="noopener">Download (VST3 &amp; AU)</a>
             <a class="btn btn-primary" href="https://github.com/aaronpetrini96/VocalCompressor" target="_blank" rel="noopener">Source code</a>
           </div>
+          <hr class="divider" />
         </div>
       </section>
 
@@ -86,5 +94,6 @@
     <footer class="site-footer">
       <div class="container">© Aaron Petrini</div>
     </footer>
+    <script src="carousel.js"></script>
   </body>
 </html>

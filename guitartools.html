@@ -29,20 +29,28 @@
           <a class="back-link" href="index.html#projects">&larr; Personal Projects</a>
           <h1>GuitarTools</h1>
           <p class="role">GuitarTools makes mixing guitars fast and simple!</p>
-          <p class="lead">
-A personal project built in C++ with JUCE, covering both the DSP and the interface. It brings the processing I use most when mixing electric guitars into one plugin, designed to be quick and easy to use.</p>
+          <p class="lead">A personal project built in C++ with JUCE, covering both the DSP and the interface. It brings the processing I use most when mixing electric guitars into one plugin, designed to be quick and easy to use.</p>
         </div>
       </section>
 
       <section class="section section-plain">
         <div class="container">
-          <img class="project-image" src="images/guitartools.png" alt="GuitarTools plugin interface" />
-          <p class="meta">C++ · JUCE · VST3 &amp; AU · Oct 2026</p>
+          <div class="carousel">
+            <img class="project-image is-active" src="images/guitartools_1.png" data-caption="Main view" alt="GuitarTools main view" />
+            <img class="project-image" src="images/guitartools_2.png" data-caption="Preset browser with factory and user presets" alt="GuitarTools preset browser" />
+            <img class="project-image" src="images/guitartools_3.png" data-caption="Settings menu, with the tooltips strip at the bottom" alt="GuitarTools settings menu" />
+            <img class="project-image" src="images/guitartools_4.png" data-caption="Resizable interface" alt="GuitarTools UI size menu" />
+            <button class="carousel-btn carousel-prev" type="button" aria-label="Previous image">&lsaquo;</button>
+            <button class="carousel-btn carousel-next" type="button" aria-label="Next image">&rsaquo;</button>
+          </div>
+          <p class="meta carousel-caption">Main view</p>
+          <hr class="divider" />
           <div class="button-row">
             <a class="btn btn-primary" href="https://drive.google.com/file/d/1iEf8OdnVBNuNCwL6C5-MkCe1OtJR_9VS/view?usp=sharing" target="_blank" rel="noopener">Plugin Demo</a>
             <a class="btn btn-primary" href="https://ko-fi.com/s/b1176f0ec3" target="_blank" rel="noopener">Download (VST3 &amp; AU)</a>
             <a class="btn btn-primary" href="https://github.com/aaronpetrini96/GuitarToolsV2/" target="_blank" rel="noopener">Source Code (GitHub)</a>
           </div>
+          <hr class="divider" />
         </div>
       </section>
 
@@ -53,14 +61,15 @@ A personal project built in C++ with JUCE, covering both the DSP and the interfa
           <div class="feature-group">
             <h3>Tone Range</h3>
             <ul>
-              <li>Low Cut / High Cut: high-pass and low-pass filters with adjustable cutoff frequency and four selectable slopes: 12, 24, 36 and 48 dB/oct.</li>
+              <li>Low Cut / High Cut: high-pass and low-pass filters with cutoff ranges carefully limited for guitar mixing.</li>
+              <li>Slope: four selectable slopes for each filter: 12, 24, 36 and 48 dB/oct.</li>
             </ul>
           </div>
           <div class="feature-group">
             <h3>Clean-Up</h3>
             <ul>
               <li>Kill Reso: narrow cut with adjustable frequency to remove harsh resonances.</li>
-              <li>Clear Mud: wider cut that reduces low-mid buildup, with adjustable amount.</li>
+              <li>Clear Mud: wide dip that reduces low-mid buildup, with adjustable amount.</li>
               <li>Tame Lows: band compressor that keeps the low end of chugs and palm mutes under control, with adjustable amount.</li>
               <li>Each tool includes a MAX switch for more aggressive processing.</li>
             </ul>
@@ -93,5 +102,6 @@ A personal project built in C++ with JUCE, covering both the DSP and the interfa
     <footer class="site-footer">
       <div class="container">© Aaron Petrini</div>
     </footer>
+    <script src="carousel.js"></script>
   </body>
 </html>

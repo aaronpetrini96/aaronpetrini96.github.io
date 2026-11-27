@@ -513,10 +513,6 @@ h3 {
   font-size: 1.5rem;
   font-weight: 300;
   /* letter-spacing: -0.02em; */
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 6px;
 }
 
 .image-pair {
@@ -645,13 +641,6 @@ h3 {
   display: flex;
   justify-content: center;
   gap: 24px;
-}
-
-.pedal-pair .project-image {
-  width: 30%;
-  margin-inline: 0;
-  border: 0;
-  background: none;
 }
 
 .card-body h3 a::after {
@@ -825,13 +814,13 @@ h3 {
 }
 
 .meta {
-  margin: 12px 0 0;
-  color: var(--text-muted);
-  font-size: 0.95rem;
+  margin: 16px 0 0;
+  color: var(--text);
+  font-size: 1.1rem;
 }
 
 .project-image + .meta,
-.pedal-pair + .meta {
+.carousel + .meta {
   text-align: center;
 }
 
@@ -843,6 +832,67 @@ h3 {
   border: 1px solid var(--border);
   border-radius: 16px;
   background: #0f1530;
+}
+
+.divider {
+  margin: 36px 0 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.carousel-narrow {
+  max-width: 300px;
+}
+
+.carousel-narrow .project-image {
+  border: 0;
+  background: none;
+}
+
+.carousel .project-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.carousel .project-image:first-child {
+  position: relative;
+  height: auto;
+}
+
+.carousel .project-image.is-active {
+  opacity: 1;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(5, 8, 22, 0.7);
+  color: var(--text);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.carousel-prev {
+  left: 12px;
+}
+
+.carousel-next {
+  right: 12px;
 }
 
 .feature-grid {

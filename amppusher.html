@@ -35,16 +35,20 @@
 
       <section class="section section-plain">
         <div class="container">
-          <div class="pedal-pair">
-            <img class="project-image" src="images/AmpPusherGreen.png" alt="AmpPusher green unit" />
-            <img class="project-image" src="images/AmpPusherYellow.png" alt="AmpPusher yellow unit" />
+          <div class="carousel carousel-narrow">
+            <img class="project-image is-active" src="images/AmpPusherGreen.png" data-caption="Green unit" alt="AmpPusher green unit" />
+            <img class="project-image" src="images/AmpPusherYellow.png" data-caption="Yellow unit" alt="AmpPusher yellow unit" />
+            <button class="carousel-btn carousel-prev" type="button" aria-label="Previous image">&lsaquo;</button>
+            <button class="carousel-btn carousel-next" type="button" aria-label="Next image">&rsaquo;</button>
           </div>
-          <p class="meta">C++ · JUCE · Python · PyTorch · Nov 2026</p>
+          <p class="meta carousel-caption">Green unit</p>
+          <hr class="divider" />
           <div class="button-row">
             <!-- <a class="btn btn-primary" href="https://drive.google.com/file/d/1iEf8OdnVBNuNCwL6C5-MkCe1OtJR_9VS/view?usp=sharing" target="_blank" rel="noopener">Plugin Demo</a> -->
             <a class="btn btn-primary" href="https://ko-fi.com/s/b1176f0ec3" target="_blank" rel="noopener">Download (VST3 &amp; AU)</a>
             <a class="btn btn-primary" href="https://github.com/aaronpetrini96/GuitarToolsV2/" target="_blank" rel="noopener">Source Code (GitHub)</a>
           </div>
+          <hr class="divider" />
         </div>
       </section>
 
@@ -88,5 +92,6 @@
     <footer class="site-footer">
       <div class="container">© Aaron Petrini</div>
     </footer>
+    <script src="carousel.js"></script>
   </body>
 </html>
