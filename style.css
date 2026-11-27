@@ -90,6 +90,40 @@ a:focus-visible {
   color: var(--accent);
 }
 
+.nav-dropdown {
+  position: relative;
+  display: flex;
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 22px);
+  left: -16px;
+  min-width: 180px;
+  padding: 8px 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  z-index: 20;
+}
+
+.nav-menu::before {
+  content: "";
+  position: absolute;
+  inset: -23px 0 100%;
+}
+
+.nav-dropdown:hover .nav-menu,
+.nav-dropdown:focus-within .nav-menu {
+  display: block;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 8px 16px;
+}
+
 /* Hero */
 .hero {
   padding: 70px 0 96px;
@@ -314,7 +348,7 @@ h2 {
 }
 
 .section-intro {
-  margin: 8px 0 36px;
+  margin: 36px 0;
   color: var(--text-secondary);
 }
 
@@ -342,26 +376,26 @@ h2 {
 }
 
 #projects .card-body-img[src="images/guitartools.png"] {
-  width: 55%;
+  width: 94.8%;
 }
 
 #projects .pedal-pair .card-body-img {
   flex: none;
-  width: 25.2%;
+  width: 46.8%;
   margin-inline: 0;
   border: 0;
 }
 
 #projects .card-body-img[src="images/vocalcompressor.png"] {
-  width: 70%;
+  width: 59.2%;
 }
 
 #projects .card-body-img[src="images/irfx.png"] {
-  width: 97.5%;
+  width: 76.5%;
 }
 
 #projects .card-body-img[src="images/extremecomp.png"] {
-  width: 100%;
+  width: 78.6%;
 }
 
 #work .grid {
@@ -716,11 +750,9 @@ h3 {
 }
 
 /* Contact */
-.contact-layout {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-  gap: 48px;
-  align-items: center;
+.contact-buttons {
+  justify-content: flex-start;
+  margin: 0 0 36px;
 }
 
 .contact-details {
@@ -746,6 +778,27 @@ h3 {
   border-top: 1px solid var(--border);
   color: var(--text-muted);
   font-size: 0.9rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--text);
 }
 
 .quick-links-title {
@@ -799,18 +852,6 @@ h3 {
 .project-hero {
   padding: 64px 0 36px;
   background: radial-gradient(60% 80% at 15% 0%, rgba(79, 140, 255, 0.18), transparent 70%);
-}
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 24px;
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-.back-link:hover {
-  color: var(--text);
 }
 
 .meta {

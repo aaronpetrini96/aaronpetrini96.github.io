@@ -14,10 +14,20 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="index.html">Aaron Petrini</a>
+        <a class="brand" href="index.html">Aaron Petrini - Web Portfolio</a>
         <nav aria-label="Main">
+          <a href="index.html#home">Home</a>
           <a href="index.html#work">Professional Work</a>
-          <a href="index.html#projects">Personal Projects</a>
+          <div class="nav-dropdown">
+            <a href="index.html#projects">Personal Projects</a>
+            <div class="nav-menu">
+              <a href="guitartools.html">GuitarTools</a>
+              <a href="amppusher.html">AmpPusher</a>
+              <a href="vocalcompressor.html">VocalCompressor</a>
+              <a href="irfx.html">IRFx</a>
+              <a href="extremecomp.html">ExtremeComp</a>
+            </div>
+          </div>
           <a href="index.html#contact">Contact</a>
         </nav>
       </div>
@@ -26,7 +36,6 @@
     <main>
       <section class="project-hero">
         <div class="container">
-          <a class="back-link" href="index.html#projects">&larr; Personal Projects</a>
           <h1>IRFx</h1>
           <p class="role">A fast, practical tool for modern guitarists.</p>
           <p class="lead">A guitar and bass cabinet impulse response (IR) loader with several extra processing features.</p>
@@ -94,7 +103,14 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container">© Aaron Petrini</div>
+      <div class="container footer-inner">
+        <span>© 2026 Aaron Petrini · Audio Software Engineer</span>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="https://www.linkedin.com/in/aaronpetrini/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/aaronpetrini96" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:aaron.petrini96@gmail.com">Email</a>
+        </nav>
+      </div>
     </footer>
     <script src="carousel.js"></script>
   </body>

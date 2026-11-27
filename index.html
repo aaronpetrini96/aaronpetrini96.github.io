@@ -25,7 +25,16 @@
         <nav aria-label="Main">
           <a href="#home">Home</a>
           <a href="#work">Professional Work</a>
-          <a href="#projects">Personal Projects</a>
+          <div class="nav-dropdown">
+            <a href="#projects">Personal Projects</a>
+            <div class="nav-menu">
+              <a href="guitartools.html">GuitarTools</a>
+              <a href="amppusher.html">AmpPusher</a>
+              <a href="vocalcompressor.html">VocalCompressor</a>
+              <a href="irfx.html">IRFx</a>
+              <a href="extremecomp.html">ExtremeComp</a>
+            </div>
+          </div>
           <a href="#contact">Contact</a>
         </nav>
       </div>
@@ -44,7 +53,7 @@
           <p class="lead">I'm also a musician: I've been playing guitar, recording and mixing for about 15 years, and I've worked as a freelance guitar instructor and session musician for 150+ clients. So when I build a plugin, I can't help looking at it from both sides, the developer's and the user's.</p>
           <p class="lead">I'd like to join a remote team working on technically challenging audio software, and I'm also open to freelance and project-based work.</p>
           </div>
-          <p class="quick-links-title">Quick links</p>
+          <p class="quick-links-title"></p>
           <div class="social-icons">
             <a href="mailto:aaron.petrini96@gmail.com" aria-label="Email"><img src="images/mailCircle.png" alt="" /></a>
             <a href="https://www.linkedin.com/in/aaronpetrini/" aria-label="LinkedIn"><img src="images/circleLinkedin.png" alt="" /></a>
@@ -202,15 +211,26 @@
         <div class="container">
           <h2>Personal Projects</h2>
           <!-- <p class="section-intro">Plugins I designed and built on my own. Click on any project to learn more.</p> -->
-          <p class="section-intro">Click a plugin to see its features, demo and source code.</p>
+          <!-- <p class="section-intro">Click a plugin to see its features, demo and source code.</p> -->
 
           <div class="grid">
-            <article class="card card-plain card-wide">
+            <article class="card card-plain">
               <div class="card-body">
                 <h3><a href="guitartools.html">GuitarTools</a></h3>
                 <!-- <p class="image-caption">All-in-one toolbox for mixing modern electric guitars.</p> -->
                 <a class="card-img-link" href="guitartools.html"><img class="card-body-img" src="images/guitartools.png" alt="GuitarTools plugin interface" /></a>
                 <p class="image-caption">Oct 2026 · C++ / JUCE</p>
+              </div>
+            </article>
+
+            <article class="card card-plain">
+              <div class="card-body">
+                <h3><a href="amppusher.html">AmpPusher</a></h3>
+                <a class="card-img-link pedal-pair" href="amppusher.html">
+                  <img class="card-body-img" src="images/AmpPusherGreen.png" alt="AmpPusher green unit" />
+                  <img class="card-body-img" src="images/AmpPusherYellow.png" alt="AmpPusher yellow unit" />
+                </a>
+                <p class="image-caption">Nov 2026 · C++ / JUCE · Python / PyTorch</p>
               </div>
             </article>
 
@@ -220,17 +240,6 @@
                 <!-- <p class="image-caption">Dual-stage compressor with a swappable processing order.</p> -->
                 <a class="card-img-link" href="vocalcompressor.html"><img class="card-body-img" src="images/vocalcompressor.png" alt="VocalCompressor plugin interface" /></a>
                 <p class="image-caption">Nov 2026 · C++ / JUCE</p>
-              </div>
-            </article>
-
-            <article class="card card-plain card-wide">
-              <div class="card-body">
-                <h3><a href="amppusher.html">AmpPusher</a></h3>
-                <a class="card-img-link pedal-pair" href="amppusher.html">
-                  <img class="card-body-img" src="images/AmpPusherGreen.png" alt="AmpPusher green unit" />
-                  <img class="card-body-img" src="images/AmpPusherYellow.png" alt="AmpPusher yellow unit" />
-                </a>
-                <p class="image-caption">Nov 2026 · C++ / JUCE · Python / PyTorch</p>
               </div>
             </article>
 
@@ -298,35 +307,33 @@
       -->
 
       <section id="contact" class="section">
-        <div class="container contact-layout">
-          <div>
-            <h2>Contact</h2>
-            <p class="section-intro">
-              Open to remote roles at audio plugin companies and to freelance work.
-            </p>
-            <a class="btn btn-primary" href="mailto:aaron.petrini96@gmail.com">Email me</a>
+        <div class="container">
+          <h2>Contact</h2>
+          <p class="section-intro">
+            If you’re interested in working together, feel free to get in touch. I’m open to full-time, part-time and freelance work on any kind of project.
+          </p>
+          <div class="button-row contact-buttons">
+            <a class="btn btn-primary" href="mailto:aaron.petrini96@gmail.com">Email</a>
+            <a class="btn btn-primary" href="https://www.linkedin.com/in/aaronpetrini/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-primary" href="https://github.com/aaronpetrini96" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-primary" href="https://drive.google.com/file/d/1sniBaYMMDnfes6-jsnMOi0Qz1FKTEBkw/view?usp=sharing" target="_blank" rel="noopener">CV</a>
           </div>
           <dl class="contact-details">
-            <dt>Email</dt>
-            <dd><a href="mailto:aaron.petrini96@gmail.com">aaron.petrini96@gmail.com</a></dd>
-            <dt>LinkedIn</dt>
-            <dd><a href="https://www.linkedin.com/in/aaronpetrini/">linkedin.com/in/aaronpetrini</a></dd>
-            <dt>GitHub</dt>
-            <dd><a href="https://github.com/aaronpetrini96">github.com/aaronpetrini96</a></dd>
-            <dt>CV</dt>
-            <dd><a href="https://drive.google.com/file/d/1sniBaYMMDnfes6-jsnMOi0Qz1FKTEBkw/view?usp=sharing">View CV</a></dd>
             <dt>Based in</dt>
             <dd>Buenos Aires, Argentina (GMT-3)</dd>
-            <dt>Languages</dt>
-            <dd>English and Spanish</dd>
           </dl>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        © Aaron Petrini
+      <div class="container footer-inner">
+        <span>© 2026 Aaron Petrini · Audio Software Engineer</span>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="https://www.linkedin.com/in/aaronpetrini/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/aaronpetrini96" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:aaron.petrini96@gmail.com">Email</a>
+        </nav>
       </div>
     </footer>
     <script>
