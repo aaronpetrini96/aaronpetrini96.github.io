@@ -130,12 +130,6 @@ a:focus-visible {
   background: radial-gradient(60% 80% at 20% 0%, rgba(79, 140, 255, 0.15), transparent 70%);
 }
 
-.eyebrow {
-  margin: 0 0 56px;
-  color: var(--text-muted);
-  font-size: .95rem;
-}
-
 h1,
 h2,
 h3 {
@@ -305,15 +299,6 @@ h1 {
   background: #7aa8ff;
 }
 
-.btn-secondary {
-  color: var(--text);
-  border-color: var(--accent);
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.07);
-}
-
 /* Sections */
 .section {
   padding: 72px 0;
@@ -336,6 +321,11 @@ h1 {
 main section[id] {
   min-height: calc(100vh - 50px);
   scroll-snap-align: start;
+}
+
+#skills,
+#contact {
+  min-height: 0;
 }
 
 h2 {
@@ -588,12 +578,6 @@ h3 {
   }
 }
 
-.card-body .tech-label {
-  margin: 36px 0 0;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
 .card-body .chips {
   gap: 8px;
   margin-top: 24px;
@@ -611,34 +595,15 @@ h3 {
   color: var(--text-muted);
 }
 
-.card-plain .card-body p:not(.card-meta):not(.image-caption):not(.tech-label) {
+.card-plain .card-body p:not(.card-meta):not(.image-caption) {
   margin: 20px 0 0;
   font-size: 1.15rem;
   color: var(--text-secondary);
   text-align: justify;
 }
 
-.card-plain .card-body .card-subtitle + p:not(.card-meta):not(.image-caption):not(.tech-label) {
+.card-plain .card-body .card-subtitle + p:not(.card-meta):not(.image-caption) {
   margin-top: 20px;
-}
-
-.card-title-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 4px 16px;
-}
-
-.card-title-row h3,
-.card-title-row .card-meta {
-  margin: 0;
-  text-align: left;
-}
-
-.card-link {
-  display: inline-block;
-  margin-top: 12px;
-  font-size: 0.95rem;
 }
 
 #projects .card-plain .card-body p {
@@ -691,11 +656,6 @@ h3 {
 
 .card-body h3 a:hover::after {
   transform: scale(1.15);
-}
-
-.card-plain .card-link {
-  margin-top: 36px;
-  font-size: 1.5rem;
 }
 
 /* Skills */
