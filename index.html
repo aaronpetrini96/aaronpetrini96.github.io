@@ -96,7 +96,10 @@
                   During development, I set up the UI code structure and its link to the plugin parameters, and built almost every interface component from a Figma design, from panels, popups, knobs, and buttons to the spectrum graph, level meters, preset browser, and the rest of the visible interface. Behind the interface, I built the logic that drives it: preset saving, loading and deleting, A/B states, and a settings system that stores the user's preferences, such as interface size, font scaling, and tooltip visibility, keeping them in sync across every open instance of the plugin.
                 </p>
                 <p>
-                  On the DSP side, I implemented the sidechain input and plugin bypass, removed a psychoacoustic compensation that was degrading the resonance reduction, and skipped metering and analysis work while the editor is closed. I also built the processing modes: Live runs a single short STFT window for low latency, while Studio splits the signal into three bands with long windows for the lows and short ones for the highs, with Pro and Ultra quality options. Window sizes scale with the sample rate, and the chosen mode can be applied to every instance in the project. Finally, I tested the plugin and suggested improvements.
+                  On the DSP side, I implemented the sidechain input and plugin bypass, removed a psychoacoustic compensation that was degrading the resonance reduction, and skipped metering and analysis work while the editor is closed.
+                </p>
+                <p>
+                  The plugin already had Live and Studio modes, but their FFT windows were too short to resolve the low end. I rebuilt Studio's processing around three bands, with long windows for the lows and short ones for the highs, and gave each mode two quality levels: Light and Normal for Live, Pro and Ultra for Studio. Window sizes scale with the sample rate so every mode keeps its resolution, and the chosen mode can be applied to every instance in the project. Finally, I tested the plugin and suggested improvements.
                 </p>
                 <p>
                   Note: I left the team before the commercial release, so I can't confirm every part of this made it into the final version, although the released plugin appears to include it.
@@ -295,13 +298,12 @@
             <li><img class="rounded-icon" src="images/skills/codex.png" alt="" />Codex</li>
             <li><img src="images/skills/figma.png" alt="" />Figma</li>
             <li><img src="images/skills/jira.png" alt="" />Jira</li>
-            <li><img src="images/skills/xcode.png" alt="" />Xcode</li>
-            <li><img src="images/skills/visualstudio.png" alt="" />Visual Studio</li>
+          </ul>
+          <ul class="hero-tools hero-tools-mid">
             <li><img src="images/skills/clion.png" alt="" />CLion</li>
             <li><img src="images/skills/vscode.png" alt="" />VS Code</li>
-            <!-- <li><img src="images/skills/git.png" alt="" />Git</li> -->
-            <!-- <li><img class="rounded-icon" src="images/skills/trello.png" alt="" />Trello</li> -->
-            <!-- <li><img src="images/skills/office.png" alt="Excel &amp; Word" title="Excel &amp; Word" /></li> -->
+            <li><img src="images/skills/xcode.png" alt="" />Xcode</li>
+            <li><img src="images/skills/visualstudio.png" alt="" />Visual Studio</li>
           </ul>
           <ul class="hero-tools">
             <li><img src="images/skills/reaper.png" alt="" />Reaper</li>
@@ -322,7 +324,7 @@
             <a class="btn btn-primary" href="mailto:aaron.petrini96@gmail.com">Email</a>
             <a class="btn btn-primary" href="https://www.linkedin.com/in/aaronpetrini/" target="_blank" rel="noopener">LinkedIn</a>
             <a class="btn btn-primary" href="https://github.com/aaronpetrini96" target="_blank" rel="noopener">GitHub</a>
-            <a class="btn btn-primary" href="https://drive.google.com/file/d/1sniBaYMMDnfes6-jsnMOi0Qz1FKTEBkw/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+            <a class="btn btn-primary" href="https://drive.google.com/file/d/1sIdfolng_JR68kVgmeixpxnDwue-DQrF/view?usp=sharing" target="_blank" rel="noopener">CV</a>
           </div>
           <dl class="contact-details">
             <dt>Based in</dt>
